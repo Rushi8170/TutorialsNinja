@@ -12,6 +12,8 @@ import com.tutorialsninja.qa.pages.SearchPage;
 
 public class SearchTest extends TestBase {
 
+	//Updated Comment
+	
 	public WebDriver driver;
 	SearchPage searchPage;
 	HomePage homePage;
