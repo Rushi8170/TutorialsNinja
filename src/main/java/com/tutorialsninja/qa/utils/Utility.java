@@ -17,6 +17,8 @@ import org.openqa.selenium.io.FileHandler;
 
 public class Utility {
 
+	
+	//New Folder screenshot added.
 	public static final int IMPLICIT_WAIT_TIME = 10;
 	public static final int PAGE_LOADOUT_TIME = 5;
 
