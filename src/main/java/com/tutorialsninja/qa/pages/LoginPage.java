@@ -34,6 +34,13 @@ public class LoginPage {
 		return new AccountPage(driver);
 	}
 	
+	public AccountPage loginWithPropertyFile(String emailText, String enterPass) {
+		emailAdressField.sendKeys(emailText);
+		passwordField.sendKeys(enterPass);
+		selectLogin.click();
+		return new AccountPage(driver);
+	}
+	
 	public String retriveEmailPasswordNotMatchingWarningText() {
 		String warningText = emailPasswordNotMatching.getText();
 		return warningText;

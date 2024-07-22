@@ -12,6 +12,9 @@ public class AccountPage {
 	@FindBy(linkText = "Edit your account information")
 	WebElement editYourAccountInformationOption;
 	
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	WebElement yourAccountHasBeenSuccessfullyUpdated;
+	
 	public AccountPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -21,4 +24,17 @@ public class AccountPage {
 		boolean displayStatus = editYourAccountInformationOption.isDisplayed();
 		return displayStatus;
 	}
+	
+	public boolean getDisplayStatusOfUpdatedAcountInformation() {
+		boolean displayStatus = yourAccountHasBeenSuccessfullyUpdated.isDisplayed();
+		return displayStatus;
+	}
+	
+	public EditYourAccountPage openLinkForEditAccountinformatin() {
+		editYourAccountInformationOption.click();
+		return new EditYourAccountPage(driver);
+	}
+	
+	
+	
 }
